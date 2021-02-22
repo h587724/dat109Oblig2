@@ -10,6 +10,11 @@ public class Card {
 		number = null;
 	}
 	
+	public Card (String num) {
+		this.cardId = 0;
+		this.number = num;
+	}
+	
 	public Card (int id, String num) {
 		this.cardId = id;
 		this.number = num;

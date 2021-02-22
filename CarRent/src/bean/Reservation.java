@@ -8,9 +8,9 @@ public class Reservation {
 	private int custId;
 	private int carId;
 	private int timeSpan; 		// estimated in days
-	private Date regDate;
-	private Date rentFrom;
-	private Date returnDate;
+	private String regDate;
+	private String rentFrom;
+	private String returnDate;
 	private int kmOnCar;
 	private int cardId;
 	private int reservationId;
@@ -28,7 +28,9 @@ public class Reservation {
 		this.reservationId = 0;
 	}
 	
-	public Reservation (int officeId, int custId, int carId, int timeS, Date regDate, Date rentFrom, Date returnDate, int km, int card, int resId) {
+	
+	
+	public Reservation (int officeId, int custId, int carId, int timeS, String regDate, String rentFrom, String returnDate, int km, int card) {
 		this.officeId = officeId;
 		this.custId = custId;
 		this.carId = carId;
@@ -38,7 +40,7 @@ public class Reservation {
 		this.returnDate = returnDate;
 		this.kmOnCar = km;
 		this.cardId = card;
-		this.reservationId = resId;
+		this.reservationId = 0;
 	}
 	
 	public int getOfficeId() {
@@ -73,27 +75,27 @@ public class Reservation {
 		this.timeSpan = timeSpan;
 	}
 	
-	public Date getRegDate() {
+	public String getRegDate() {
 		return regDate;
 	}
 	
-	public void setRegDate(Date regDate) {
+	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
 	
-	public Date getRentFrom() {
+	public String getRentFrom() {
 		return rentFrom;
 	}
 	
-	public void setRentFrom(Date rentFrom) {
+	public void setRentFrom(String rentFrom) {
 		this.rentFrom = rentFrom;
 	}
 	
-	public Date getReturnDate() {
+	public String getReturnDate() {
 		return returnDate;
 	}
 	
-	public void setReturnDate(Date returnDate) {
+	public void setReturnDate(String returnDate) {
 		this.returnDate = returnDate;
 	}
 	

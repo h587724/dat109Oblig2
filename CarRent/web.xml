@@ -1,0 +1,46 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+<servlet>
+	<servlet-name>mainPage</servlet-name>
+	<servlet-class>controller.mainPage</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>mainPage</servlet-name>
+	<url-pattern>/mainPage</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>chooseCar</servlet-name>
+	<servlet-class>controller.chooseCar</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>chooseCar</servlet-name>
+	<url-pattern>/chooseCar</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>confirmReservation</servlet-name>
+	<servlet-class>controller.confirmReservation</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>confirmReservation</servlet-name>
+	<url-pattern>/confirmReservation</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>confirmedReservation</servlet-name>
+	<servlet-class>controller.confirmedReservation</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>confirmedReservation</servlet-name>
+	<url-pattern>/confirmedReservation</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>checkReservation</servlet-name>
+	<servlet-class>controller.checkReservation</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>checkReservation</servlet-name>
+	<url-pattern>/checkReservation</url-pattern>
+</servlet-mapping>
+</web-app>

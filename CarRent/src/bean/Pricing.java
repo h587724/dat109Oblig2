@@ -3,14 +3,14 @@ package bean;
 public class Pricing {
 
 	private String type;
-	private int price;
+	private String price;
 	
 	public Pricing () {
 		type = null;
-		price = 0;
+		price = null;
 	}
 	
-	public Pricing (String type, int price) {
+	public Pricing (String type, String price) {
 		this.type = type;
 		this.price = price;
 	}
@@ -23,11 +23,11 @@ public class Pricing {
 		this.type = type;
 	}
 	
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
 	
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 	

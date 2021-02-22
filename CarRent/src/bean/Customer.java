@@ -7,7 +7,7 @@ public class Customer {
 	private int custId;
 	private String address;
 	private String phoneNr;
-	private Card card;
+	private int card;
 	
 	public Customer () {
 		this.name = null;
@@ -15,19 +15,28 @@ public class Customer {
 		this.custId = 0;
 		this.address = null;
 		this.phoneNr = null;
-		this.card = null;
+		this.card = 0;
 	}
 	
-	public Customer (String name, String lName, int id, String address, String phone) {
+	public Customer (String name, String lName, String address, String phone) {
 		this.name = name;
 		this.lName = lName;
-		this.custId = id;
+		this.custId = 0;
 		this.address = address;
 		this.phoneNr = phone;
-		this.card = null;
+		this.card = 0;
 	}
 	
-	public Customer (String name, String lName, int id, String address, String phone, Card card) {
+	public Customer (String name, String lName, String address, String phone, int card) {
+		this.name = name;
+		this.lName = lName;
+		this.custId = 0;
+		this.address = address;
+		this.phoneNr = phone;
+		this.card = card;
+	}
+	
+	public Customer (String name, String lName, int id, String address, String phone, int card) {
 		this.name = name;
 		this.lName = lName;
 		this.custId = id;
@@ -76,11 +85,11 @@ public class Customer {
 		this.phoneNr = phoneNr;
 	}
 	
-	public Card getCard() {
+	public int getCard() {
 		return card;
 	}
 	
-	public void setCard(Card card) {
+	public void setCard(int card) {
 		this.card = card;
 	}
 	

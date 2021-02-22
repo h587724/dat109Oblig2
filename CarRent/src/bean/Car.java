@@ -1,5 +1,12 @@
 package bean;
 
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import DAO.Database;
+
 public class Car {
 
 	private int carId;
@@ -7,8 +14,10 @@ public class Car {
 	private String brand;
 	private String model;
 	private String color;
-	private Pricing type;
-	private int availability;
+	private String type;
+	private String availability;
+	private String price;
+	private int kmOnCar;
 	
 	public Car () {
 		this.carId = 0;
@@ -17,17 +26,30 @@ public class Car {
 		this.model = null;
 		this.color = null;
 		this.type = null;
-		this.availability = 0;
+		this.availability = null;
 	}
 	
-	public Car (int id, int office, String brand, String model, String color, Pricing type) {
+	public Car (int id, int office, String brand, String model, String color, String type, String availability, int km) {
 		this.carId = id;
 		this.officeId = office;
 		this.brand = brand;
 		this.model = model;
 		this.color = color;
 		this.type = type;
-		this.availability = 1;
+		this.availability = availability;
+		Database db = new Database();
+		try {
+			this.price = db.getPricing(type);
+		} catch (SQLException e) {	}
+		this.kmOnCar = km;
+	}
+	
+	public String getPrice() {
+		return price;
+	}
+	
+	public void setPrice(String price) {
+		this.price = price;
 	}
 	
 	public int getCarId() {
@@ -70,21 +92,28 @@ public class Car {
 		this.color = color;
 	}
 	
-	public Pricing getType() {
+	public String getType() {
 		return type;
 	}
 	
-	public void setType(Pricing type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	
-	public int getAvailability() {
+	public String getAvailability() {
 		return availability;
 	}
 	
-	public void setAvailability(int availability) {
+	public void setAvailability(String availability) {
 		this.availability = availability;
 	}
 	
+	public int getKmOnCar() {
+		return kmOnCar;
+	}
+	
+	public void setKmOnCar(int km) {
+		this.kmOnCar = km;
+	}
 	
 }

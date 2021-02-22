@@ -1,0 +1,27 @@
+@charset "UTF-8";
+body {
+	background-color: #EAE7DC;
+	color: #8E8D8A;
+	text-align: left;
+}
+h1 {
+	color: #E85A4F;
+	text-align: center;
+	margin: auto;
+}
+form {
+	background-color: #D8C3A5;
+	color: #17252A;
+	width: 30%;
+	margin: auto;
+	text-align: left;
+}
+color-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
